@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 public abstract class AppDatabase extends RoomDatabase {
     public abstract MensajeDao mensajeDao();
 
-    private static final  String DATABASE_NAME = "shat-db";
+    private static final String DATABASE_NAME = "shat-db";
 
     private static AppDatabase INSTANCE;
 

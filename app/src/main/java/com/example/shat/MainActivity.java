@@ -26,7 +26,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     EditText inputMensaje;
     Button botonMensaje;
-    RepositorioMensajes repositorioMensajes = new RepositorioMensajes(this);
+    RepositorioMensajes repositorioMensajes;
     MensajeVM mensajeVM;
     RecyclerView recyclerView;
     @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         inputMensaje = findViewById(R.id.inputMensaje);
         botonMensaje = findViewById(R.id.buttonEnviar);
         recyclerView = findViewById(R.id.recyclerView);
+        repositorioMensajes = new RepositorioMensajes(this);
         HiloAyudante hilo = new HiloAyudante(repositorioMensajes);
         hilo.escuchar();
         botonMensaje.setOnClickListener(new View.OnClickListener() {
